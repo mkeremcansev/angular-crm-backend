@@ -32,9 +32,9 @@ class TodoService
 
     /**
      * @param int $id
-     * @return Model|Builder
+     * @return Model|Builder|null
      */
-    public function edit($id): Model|Builder
+    public function edit($id): Model|Builder|null
     {
         return $this->repository->todoById($id);
     }

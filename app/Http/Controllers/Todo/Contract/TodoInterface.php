@@ -17,5 +17,5 @@ interface TodoInterface
      * @param int $id
      * @return Model|Builder
      */
-    public function todoById($id): Model|Builder;
+    public function todoById($id): Model|Builder|null;
 }
