@@ -9,7 +9,6 @@ use App\Http\Controllers\Todo\Service\TodoService;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 
 class TodoController extends Controller
 {
