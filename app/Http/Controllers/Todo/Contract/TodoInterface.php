@@ -12,4 +12,10 @@ interface TodoInterface
      * @return Builder|Model
      */
     public function store($request): Model|Builder;
+
+    /**
+     * @param int $id
+     * @return Model|Builder
+     */
+    public function todoById($id): Model|Builder;
 }

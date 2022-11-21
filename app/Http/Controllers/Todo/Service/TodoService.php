@@ -29,4 +29,13 @@ class TodoService
     {
         return $this->repository->store($request);
     }
+
+    /**
+     * @param int $id
+     * @return Model|Builder
+     */
+    public function edit($id): Model|Builder
+    {
+        return $this->repository->todoById($id);
+    }
 }

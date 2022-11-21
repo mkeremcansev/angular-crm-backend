@@ -30,4 +30,13 @@ class TodoRepository implements TodoInterface
     {
         return $this->model->query()->create($request);
     }
+
+    /**
+     * @param int $id
+     * @return Model|Builder
+     */
+    public function todoById($id): Model|Builder
+    {
+        return $this->model->find($id);
+    }
 }

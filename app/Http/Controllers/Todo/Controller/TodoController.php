@@ -6,7 +6,10 @@ use App\Helper\ResponseHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Todo\Request\TodoStoreRequest;
 use App\Http\Controllers\Todo\Service\TodoService;
+use Illuminate\Contracts\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 
 class TodoController extends Controller
 {
@@ -41,5 +44,14 @@ class TodoController extends Controller
         return $store
             ? $this->response->store($store->id)
             : $this->response->error();
+    }
+
+    /**
+     * @param int $id
+     * @return Model|Builder
+     */
+    public function edit($id)
+    {
+        return $this->service->edit($id);
     }
 }

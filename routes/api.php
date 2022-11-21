@@ -36,6 +36,7 @@ Route::post('/login', function (Request $request) {
 
 Route::middleware('auth:sanctum')->controller(TodoController::class)->prefix('todo/')->name('todo.')->group(function () {
     Route::post('store', 'store')->name('store');
+    Route::get('edit/{id}', 'edit')->name('edit');
 });
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
