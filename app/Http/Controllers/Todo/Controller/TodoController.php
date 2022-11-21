@@ -49,7 +49,7 @@ class TodoController extends Controller
      * @param int $id
      * @return Model|Builder|null
      */
-    public function edit($id):Model|Builder|null
+    public function edit($id): Model|Builder|null
     {
         return $this->service->edit($id);
     }
