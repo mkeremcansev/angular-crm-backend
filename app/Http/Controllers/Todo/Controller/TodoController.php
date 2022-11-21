@@ -6,8 +6,6 @@ use App\Helper\ResponseHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Todo\Request\TodoStoreRequest;
 use App\Http\Controllers\Todo\Service\TodoService;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\JsonResponse;
 
 class TodoController extends Controller
